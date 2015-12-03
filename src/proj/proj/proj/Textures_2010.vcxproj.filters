@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{a43c5c25-0e86-4a20-b64a-883785ff74fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c3d">
+      <UniqueIdentifier>{a3f2f328-18da-40fc-a630-6706090085dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{c9d27be0-cf8c-403a-a703-59afd30a497b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{fb16af64-f612-430c-82b7-a5a1862e427e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DXUT\Optional\directx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shader\color.fx">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\color.var">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\diffuse.var">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\diffuse.fx">
+      <Filter>shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\..\..\DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Core\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Optional\SDKmesh.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dCamera.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dComponent.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dDefine.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dDefineEx.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dDX.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dEffect.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dFuncs.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dGLMath.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dLightSource.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dMaterial.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dMaterialManager.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dMath.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dMatrix.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dMesh.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dModelMatStack.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dNode.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dRCobj.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dScene.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dScreenLineRender.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dSimpleClasses.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dTexture.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dTextureCache.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dVB.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dVector.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dIB.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dIBBase.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+    <ClCompile Include="c3d\c3dWireFrameIB.cpp">
+      <Filter>c3d</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </CLInclude>
+    <ResourceCompile Include="Textures.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ClInclude Include="..\..\..\DXUT\Core\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Core\DXUTenum.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Optional\DXUTres.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Optional\SDKmesh.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dCamera.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dComponent.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dDefine.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dDefineEx.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dDX.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dEffect.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dFuncs.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dGLMath.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dLightSource.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dMaterial.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dMaterialManager.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dMath.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dMatrix.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dMesh.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dModelMatStack.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dNode.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dRCobj.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dScene.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dScreenLineRender.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dSimpleClasses.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dTexture.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dTextureCache.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dVB.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dVector.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dIB.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dIBBase.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3dWireFrameIB.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+    <ClInclude Include="c3d\c3d.h">
+      <Filter>c3d</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

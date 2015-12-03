@@ -1,0 +1,16 @@
+uniform:
+float4x4 g_mWorld                 
+float4x4 g_mWorldViewProjection
+float4 g_diffuseM
+float4 g_ambientM
+float4 g_diffuseL
+float4 g_ambientL
+float4 g_tintColor
+float3 g_lightDir
+end 
+
+
+
+sampler:
+texture g_mainTexture  
+end

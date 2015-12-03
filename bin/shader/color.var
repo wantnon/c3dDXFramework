@@ -1,0 +1,8 @@
+uniform:
+float4x4 g_mWorldViewProjection
+float4 g_tintColor
+end
+
+
+sampler:
+end
