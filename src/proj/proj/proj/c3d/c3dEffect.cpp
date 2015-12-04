@@ -110,7 +110,7 @@ float Cc3dUniform::getFloat()const {
 //------------------------------------------------------------------------------------------
 
 	void Cc3dEffect::initWithFile(const string&effectFileName,const string&effectVarFileName){
-
+		m_fileName=effectFileName;
 		
 		WCHAR wcstr[MAX_WCSTR_LEN];
 		MultiByteToWideChar(0,0,effectFileName.c_str(),-1,wcstr,MAX_WCSTR_LEN);

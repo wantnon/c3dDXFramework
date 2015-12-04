@@ -3,6 +3,7 @@
 LPDIRECT3D9             g_pD3D = NULL; // Used to create the D3DDevice
 LPDIRECT3DDEVICE9       g_pd3dDevice = NULL; // Our rendering device
 ID3DXFont*              g_pFont=NULL;
+ID3DXSprite*            g_pSprite = NULL;       // Sprite for batching draw text calls
 float g_minZ=0;
 float g_maxZ=1;
 

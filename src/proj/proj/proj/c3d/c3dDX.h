@@ -10,6 +10,7 @@ using namespace std;
 extern LPDIRECT3D9             g_pD3D ;
 extern LPDIRECT3DDEVICE9       g_pd3dDevice ;
 extern ID3DXFont*              g_pFont;
+extern ID3DXSprite*            g_pSprite; 
 
 extern float g_minZ;
 extern float g_maxZ;

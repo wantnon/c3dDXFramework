@@ -58,6 +58,7 @@ HRESULT InitD3D( HWND hWnd )
 HRESULT InitScene()
 {
 	//create font
+	//g_pFont
 	//ref: http://blog.csdn.net/kesalin/article/details/1820419
 	D3DXFONT_DESC fontDesc;
 	ZeroMemory(&fontDesc, sizeof(D3DXFONT_DESC));
@@ -70,9 +71,12 @@ HRESULT InitScene()
 	fontDesc.MipLevels       = D3DX_DEFAULT;          
 	fontDesc.Quality        = 0;           
 	fontDesc.PitchAndFamily = 0;           
-	//strcpy wchar: http://blog.csdn.net/shiwei0124/article/details/4531651
-	wcscpy(fontDesc.FaceName, _T("Times New Roman")); 
+	wcscpy(fontDesc.FaceName, _T("Times New Roman"));//strcpy wchar: http://blog.csdn.net/shiwei0124/article/details/4531651 
 	D3DXCreateFontIndirect(g_pd3dDevice,&fontDesc,&g_pFont);
+	//g_pSprite
+	// Create a sprite to help batch calls when drawing many lines of text
+    D3DXCreateSprite( g_pd3dDevice, &g_pSprite ) ;
+
 
 
     //cull face 
@@ -342,12 +346,16 @@ VOID Cleanup()
 
 	if(	g_pFont	!=NULL	)
 		g_pFont->Release();
+	if(g_pSprite!=NULL)
+		g_pSprite->Release();
 }
 
 //-----------------------------------------------------------------------------
 // RenderText()
 //-----------------------------------------------------------------------------
 VOID RenderText(HWND hWnd){
+	g_pSprite->Begin( D3DXSPRITE_ALPHABLEND | D3DXSPRITE_SORT_TEXTURE );
+
 	RECT winRect;
 	GetClientRect(hWnd,&winRect);
 
@@ -356,8 +364,9 @@ VOID RenderText(HWND hWnd){
 	textRect.left=winRect.left;
 	textRect.right=winRect.right;
 	textRect.bottom=(winRect.top+winRect.bottom)*0.4;
-	g_pFont->DrawText(NULL,_T("array key: rotate"),-1,&textRect,DT_CENTER|DT_VCENTER,D3DCOLOR_XRGB(255, 255, 255));
+	g_pFont->DrawText(g_pSprite,_T("array key: rotate"),-1,&textRect,DT_CENTER|DT_VCENTER,D3DCOLOR_XRGB(255, 255, 255));
 	
+	g_pSprite->End();
 }
 
 //-----------------------------------------------------------------------------

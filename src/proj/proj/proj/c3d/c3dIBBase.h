@@ -44,7 +44,6 @@ public:
 	
 	virtual void createIB(){};
 	virtual void updateIB(){};
-	virtual void render(){};
 public:
 	IDirect3DIndexBuffer9*	m_pIB;
 	int m_indexCount;
