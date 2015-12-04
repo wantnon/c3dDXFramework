@@ -49,15 +49,3 @@ void Cc3dIB::updateIB(){
 	}
 	m_pIB->Unlock();
 }
-void Cc3dIB::update(){
-	if(m_isEnable==false)return;
-	Cc3dMaterial*material=m_materialRef;
-	Cc3dLightSource*lightSource=Cc3dScene::getInstance()->m_lightSource;
-	assert(material);
-	//update uniforms on client side
-	material->m_effect->setUniform("g_diffuseL",lightSource->m_diffuse);
-	material->m_effect->setUniform("g_ambientL",lightSource->m_ambient);
-	material->m_effect->setUniform("g_lightDir",lightSource->m_dir.toV3());
-
-
-}

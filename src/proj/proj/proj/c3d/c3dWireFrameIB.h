@@ -19,7 +19,6 @@ public:
 
 	void createIB();
 	void updateIB();
-	void update();
 
 
 };

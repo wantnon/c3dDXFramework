@@ -28,7 +28,11 @@ void Cc3dMaterial::render(){
 		}
 	
 		Cc3dCamera*camera=Cc3dScene::getInstance()->m_camera;
-		
+		Cc3dLightSource*lightSource=Cc3dScene::getInstance()->m_lightSource;
+		//pass light info
+		m_effect->setUniform("g_diffuseL",lightSource->m_diffuse);
+		m_effect->setUniform("g_ambientL",lightSource->m_ambient);
+		m_effect->setUniform("g_lightDir",lightSource->m_dir.toV3());
 
 		//----apply textures
 		int samplerCount=(int)m_effect->m_samplerList.size();
@@ -59,6 +63,7 @@ void Cc3dMaterial::render(){
 				Cc3dMatrix4 PVM=PV*modelMat;
 				m_effect->setUniform("g_mWorldViewProjection",PVM);
 				m_effect->setUniform("g_mWorld",modelMat);
+
 				m_effect->applyAllDirtyUniforms();
 				//----draw passes
 				for( iPass = 0; iPass < cPasses; iPass++ )

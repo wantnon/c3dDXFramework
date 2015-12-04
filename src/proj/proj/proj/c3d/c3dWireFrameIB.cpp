@@ -35,8 +35,3 @@ void Cc3dWireFrameIB::updateIB(){
 
 	m_pIB->Unlock();
 }
-void Cc3dWireFrameIB::update(){
-
-	
-
-}
