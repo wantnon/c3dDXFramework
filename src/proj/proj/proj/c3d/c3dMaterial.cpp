@@ -54,25 +54,26 @@ void Cc3dMaterial::render(){
 			m_effect->m_pEffect->SetTechnique( m_effectTechnique.c_str() ) ;
 			UINT iPass, cPasses;
 			m_effect->m_pEffect->Begin( &cPasses, 0 );
-			//----draw ibs
-			const int ibCount=(int)m_ibList.size();
-			for(int i=0;i<ibCount;i++){
-				Cc3dIBBase*ib=m_ibList[i];
-				//----set and apply matrix
-				Cc3dMatrix4 modelMat=ib->m_nodeRef->m_cachedWorldMat;
-				Cc3dMatrix4 PVM=PV*modelMat;
-				m_effect->setUniform("g_mWorldViewProjection",PVM);
-				m_effect->setUniform("g_mWorld",modelMat);
+			//----draw passes
+			for( iPass = 0; iPass < cPasses; iPass++ )
+			{
+				m_effect->m_pEffect->BeginPass( iPass ) ;
+				// The effect interface queues up the changes and performs them 
+				// with the CommitChanges call. You do not need to call CommitChanges if 
+				// you are not setting any parameters between the BeginPass and EndPass.
+				// V( g_pEffect->CommitChanges() );
 
-				m_effect->applyAllDirtyUniforms();
-				//----draw passes
-				for( iPass = 0; iPass < cPasses; iPass++ )
-				{
-					m_effect->m_pEffect->BeginPass( iPass ) ;
-					// The effect interface queues up the changes and performs them 
-					// with the CommitChanges call. You do not need to call CommitChanges if 
-					// you are not setting any parameters between the BeginPass and EndPass.
-					// V( g_pEffect->CommitChanges() );
+				//----draw ibs
+				const int ibCount=(int)m_ibList.size();
+				for(int i=0;i<ibCount;i++){
+					Cc3dIBBase*ib=m_ibList[i];
+					//----set and apply matrix
+					Cc3dMatrix4 modelMat=ib->m_nodeRef->m_cachedWorldMat;
+					Cc3dMatrix4 PVM=PV*modelMat;
+					m_effect->setUniform("g_mWorldViewProjection",PVM);
+					m_effect->setUniform("g_mWorld",modelMat);
+
+					m_effect->applyAllDirtyUniforms();
 
 					// Render the buffer contents with the applied technique
 					{	
@@ -92,18 +93,18 @@ void Cc3dMaterial::render(){
 						g_pd3dDevice->DrawIndexedPrimitive(primitiveType, 0, 0, VB->m_vertexCount, 0, primitveCount);
 					}
 
-					m_effect->m_pEffect->EndPass() ;
-
 				}
+				
+				m_effect->m_pEffect->EndPass() ;
 
 			}
-			
+
 			m_effect->m_pEffect->End() ;
 		}
 
 		if(m_onRenderLeave){
 			m_onRenderLeave();
-			
+
 			
 		}
 
